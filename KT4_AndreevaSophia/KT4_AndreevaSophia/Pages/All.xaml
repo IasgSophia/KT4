@@ -1,0 +1,40 @@
+﻿<Page x:Class="KT4_AndreevaSophia.Pages.All"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KT4_AndreevaSophia.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Вывод">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+        <ListView Grid.Row="0" x:Name="DataGrid">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0">
+                            <TextBlock Text="{Binding FIO}"></TextBlock>
+                            <TextBlock Text="{Binding Email}"></TextBlock>
+                            <TextBlock Text="{Binding Birth}"></TextBlock>
+                            <TextBlock Text="{Binding Phone}"></TextBlock>
+                        </StackPanel>
+                        <TextBlock Grid.Column="1" Text="{Binding Type.Name}"></TextBlock>
+                        <Button Content="Редактировать" Grid.Column="2" x:Name="OneP" Click="OneP_Click"></Button>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Background="#FF498C51" Grid.Row="1" x:Name="AllP" Click="AllP_Click" Content="Добавить" FontSize="32" FontFamily="MS Comic Sans" BorderBrush="#FF498C51"></Button>
+    </Grid>
+</Page>

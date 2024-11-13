@@ -1,0 +1,20 @@
+﻿<Window x:Class="KT4_AndreevaSophia.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KT4_AndreevaSophia"
+        mc:Ignorable="d"
+        Title="Вывод" Height="450" Width="800" MinHeight="600" MinWidth="1000">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#FF76E383" Cursor="AppStarting">
+            <Image Source="/Sources/logo.png" HorizontalAlignment="Left" VerticalAlignment="Center"></Image>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32" FontFamily="MS Comic Sans">Спортивный Инвентарь</TextBlock>
+        </Grid>
+        <Frame Grid.Row="1" x:Name="MainFrame" NavigationUIVisibility="Hidden"></Frame>
+    </Grid>
+</Window>
